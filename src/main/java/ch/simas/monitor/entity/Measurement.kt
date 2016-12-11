@@ -17,7 +17,7 @@ open class Measurement(@Id @GeneratedValue var id: Int = 0,
                        var timestamp: LocalDateTime = LocalDateTime.now()) {
 
     val formattedTimestamp: String
-        get() = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss").format(timestamp)
+        get() = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(timestamp)
 
     val isoTimestamp: String
         get() = DateTimeFormatter.ISO_DATE_TIME.format(timestamp)

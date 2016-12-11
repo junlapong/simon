@@ -38,10 +38,18 @@
     });
 })(window);
 
+/*
 function formatTimestamp(date) {
     return pad(date.getDate()) + '.' + pad((date.getMonth() + 1)) + '.' + date.getFullYear() + ' '
             + pad(date.getHours()) + ':' + pad(date.getMinutes()) + ':' + pad(date.getSeconds());
 }
+*/
+
+function formatTimestamp(date) {
+    return date.getFullYear() + '-' + pad((date.getMonth() + 1)) + '-' + pad(date.getDate()) + ' '
+            + pad(date.getHours()) + ':' + pad(date.getMinutes()) + ':' + pad(date.getSeconds());
+}
+
 
 function pad(value) {
     if (value < 10) {

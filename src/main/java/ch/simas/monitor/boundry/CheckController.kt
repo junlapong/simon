@@ -33,7 +33,7 @@ open class CheckController(@Value("\${simon.config.hosts}") val config: String, 
                         val measurement = measurements[0]
                         host.status = measurement.status
                         host.duration = measurement.duration
-                        host.timestamp = measurement.timestamp.format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss"))
+                        host.timestamp = measurement.timestamp.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
                     }
                 }
             }
@@ -41,7 +41,7 @@ open class CheckController(@Value("\${simon.config.hosts}") val config: String, 
         }
 
     @RequestMapping
-    @Scheduled(cron = "0 */10 * * * ?")
+    @Scheduled(cron = "*/30 * * * * ?")
     fun check() {
         try {
             val hosts = loadConfiguration(config)

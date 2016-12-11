@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hosts name="Main Monitor">
     <group name="Production">
-        <host name="Google" url="https://www.google.com" />
         <host name="simon" url="http://localhost:7272" />
+        <host name="Google" url="https://www.google.co.th" />
     </group>
 </hosts>
