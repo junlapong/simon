@@ -24,3 +24,4 @@ hs_err_pid*
 .idea
 /simon.iml
 *.db
+/.apt_generated/
