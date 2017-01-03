@@ -31,7 +31,7 @@
                         vm.fetchData();
                     }, 10000);
                 } else {
-                    clearInterval(interval);
+                    clearInterval(this.interval);
                 }
             }
         }
